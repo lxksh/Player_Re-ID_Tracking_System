@@ -1,0 +1,14 @@
+
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+data/input/*.mp4
+data/input/*.pt
+data/output/*
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

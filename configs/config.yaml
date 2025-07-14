@@ -1,0 +1,33 @@
+
+video_path: "data/input/15sec_input_720.mp4"
+model_path: "data/input/best.pt"
+output_dir: "data/output"
+
+detector:
+  conf_threshold: 0.5
+  nms_threshold: 0.45
+  device: "cuda"  # or "cpu"
+
+tracker:
+  max_age: 30  # frames to keep track alive without detection
+  min_hits: 3  # minimum hits to confirm track
+  iou_threshold: 0.3
+  feature_threshold: 0.4
+
+features:
+  use_deep_features: true
+  use_color_histogram: true
+  use_position_features: true
+  feature_dim: 512
+
+viz:
+  show_ids: true
+  show_tracks: true
+  track_length: 30
+  output_fps: 30
+  codec: "mp4v"
+  save_video: true
+
+performance:
+  log_metrics: true
+  save_tracks: true
